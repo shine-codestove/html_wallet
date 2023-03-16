@@ -22,7 +22,8 @@
       $(document).ready(function () {
         let DEBUG = 1;
         // const web3 = new Web3('https://sepolia.infura.io/v3/9529b33b7f4c4fd4a5f25364631e5079');
-        const web3 = new Web3(Web3.givenProvider || "http://localhost:7545");
+        let web3 = new Web3(Web3.givenProvider || "http://localhost:7545");
+
         web3.eth.getAccounts().then((accounts) => {
           console.log(accounts);
           const accountsElems = accounts.map(
@@ -166,6 +167,6 @@
     </div>
     <div class="container">
       <div id="qrcode" class="mt-5" style="width: 250px; height: 250px"></div>
-    </div>   
+    </div>
   </body>
 </html>
